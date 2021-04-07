@@ -1,7 +1,7 @@
 # Libraries
-library(st514)
+library(st514) # Pacake from DS805 book - Applied multivariate statistical analysis
 library(tidyverse)
-library(ggExtra)
+library(ggExtra) # for ggMarinal (markinal plots)
 
 # Exercise 1.4 ------------------------------------------------------------
 
