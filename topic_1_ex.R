@@ -22,9 +22,7 @@ marginal <- ggMarginal(scatterplot, type = "histogram")
 marginal
 
 
-
 # > b Compute sample mean, variance, covariance and correlation co --------
-
 
 
 
@@ -36,7 +34,6 @@ marginal
 
 
 
-
 # > b Compute mean, variance-covariance array and correlation array -------
 
 
@@ -45,12 +42,13 @@ marginal
 
 
 
-# Exercise 1.14 -----------------------------------------------------------
-# > a) --------------------------------------------------------------------
+# Exercise 1.1.4 ----------------------------------------------------------
+# > a Plot scatter diagram ------------------------------------------------
 
 
 
-# > b) --------------------------------------------------------------------
+
+# > b Compute mean, variance-covariance and correlation array -------------
 
 
 
@@ -111,7 +109,6 @@ marginal
 
 
 
-
 # Exercise 2.7 ------------------------------------------------------------
 
 
@@ -126,5 +123,6 @@ marginal
 
 
 # > c) --------------------------------------------------------------------
+
 
 
