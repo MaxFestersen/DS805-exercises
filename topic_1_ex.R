@@ -3,7 +3,6 @@ library(st514) # Pacake from DS805 book - Applied multivariate statistical analy
 library(tidyverse)
 library(ggExtra) # for ggMarinal (markinal plots)
 
-
 # Exercise 1.4 ------------------------------------------------------------
 
 data("P1-4") # data
@@ -18,9 +17,10 @@ scatterplot <- ggplot(tbl, aes(x = sales, y = profits)) +
 
 scatterplot
 
-marginal <- ggMarginal(scat, type = "histogram")
+marginal <- ggMarginal(scatterplot, type = "histogram")
 
 marginal
+
 
 
 # > b Compute sample mean, variance, covariance and correlation co --------
