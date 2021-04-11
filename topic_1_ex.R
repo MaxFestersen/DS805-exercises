@@ -3,6 +3,7 @@ library(st514) # Pacake from DS805 book - Applied multivariate statistical analy
 library(tidyverse)
 library(ggExtra) # for ggMarginal (marginal plots)
 library(SciViews) # to use boxplots and scatterplots together with pairs function
+library(matlib) # For math functions: inverse/inv
 
 # Exercise 1.4 ------------------------------------------------------------
 
@@ -286,16 +287,48 @@ cat(paste(
 
 
 # Exercise 2.3 ------------------------------------------------------------
+A <- matrix(c(2, 1, 1, 3), 2, 2)
+B <- matrix(c(1, 5, 4, 0, 2, 3), 2, 3)
+C <- matrix(c(1, 3, 4, 2), 2, 2)
 # > a) --------------------------------------------------------------------
+A
+t(A)
 
+print("Nothing happens")
+
+# >> Testing --------------------------------------------------------------
+# For testing: NOT PART OF ASSIGNMENT
+B
+t(B)
+
+cat(paste(
+  "Is transposed: Columns and rows are swithced.",
+  "The oll' switcharoo.",
+  sep = "\n"         
+))
 
 
 # > b) --------------------------------------------------------------------
+#inv(C) # mathlib
+#solve(C) # base - NOTE: identical results for humans (robots might disagree)
+solve(t(C))
+t(solve(C))
 
-
+cat(paste(
+  "Same results.",
+  sep = "\n"
+))
 
 # > c) --------------------------------------------------------------------
+AB <- A %*% B
+t(AB)
+AB_pre_trans <- t(B) %*% t(A)
+AB_pre_trans
 
+cat(paste(
+  "Same results.",
+  sep = "\n"
+))
 
 
 # Exercise 2.5 ------------------------------------------------------------
