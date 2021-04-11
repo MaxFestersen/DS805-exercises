@@ -199,8 +199,27 @@ cat(paste(
 ))
 
 # Exercise 1.18 -----------------------------------------------------------
+data("T1-9") # data for table 1.9
+names(tbl) <- c("Country", "100m", "200m", "400m", "800m", "1500m", "3000m", "Marathon")
+
+tbl.1.18 <- tbl %>% # Formatting all values as seconds
+  mutate(`800m` = `800m`*60, `1500m` = `1500m`*60, `3000m` = `3000m`*60, `Marathon` = `Marathon`*60)
+
+tbl.1.18 <- tbl %>% # Formatting all values as m/s
+  mutate(`100m` = 100/`100m`, `200m` = 200/`200m`, `400m` = 400/`400m`, `800m` = 800/`800m`, `1500m` = 1500/`1500m`, `3000m` = 3000/`3000m`, `Marathon` = 42195/`Marathon`)
+
+# Mean for table
+tbl.1.18.mean <- colMeans(tbl.1.18[-1])
+tbl.1.18.mean
 
 
+# Variance-covariance for table
+tbl.1.18.cov <- cov(tbl.1.18[-1]) # alt: var(tbl.1.18[-1])
+tbl.1.18.cov
+
+# Correlation array for table
+tbl.1.18.cor <- cor(tbl.1.18[-1])
+tbl.1.18.cor
 
 # Exercise 1.19 (b) -------------------------------------------------------
 
