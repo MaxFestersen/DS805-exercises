@@ -221,6 +221,16 @@ tbl.1.18.cov
 tbl.1.18.cor <- cor(tbl.1.18[-1])
 tbl.1.18.cor
 
+# Comparison
+plot(tbl.1.18.cor, tbl.1.17.cor, col= c("red", "blue"))
+
+cat(paste(
+  "It would seem that the values are very similar.",
+  "The correlation of values are correlated slightly different,",
+  "but this is due to formatting.",
+  sep = "\n"
+))
+
 # Exercise 1.19 (b) -------------------------------------------------------
 
 
