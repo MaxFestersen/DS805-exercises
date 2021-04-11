@@ -2,6 +2,7 @@
 library(st514) # Pacake from DS805 book - Applied multivariate statistical analysis
 library(tidyverse)
 library(ggExtra) # for ggMarginal (marginal plots)
+library(SciViews) # to use boxplots and scatterplots together with pairs function
 
 # Exercise 1.4 ------------------------------------------------------------
 
@@ -232,14 +233,10 @@ cat(paste(
 ))
 
 # Exercise 1.19 (b) -------------------------------------------------------
+data("T1-9") # data for table 1.9 (Nullify changes)
+names(tbl) <- c("Country", "100m", "200m", "400m", "800m", "1500m", "3000m", "Marathon")
+pairs(tbl, diag.panel = panel.boxplot) # Note panel.boxplot from SciViews creates diagonal boxplots
 
-data("T1-8")
-library(SciViews)
-
-pairs(tbl, diag.panel = panel.boxplot)
-
-data("T1-9")
-pairs(tbl, diag.panel = panel.boxplot)
 
 # Exercise 1.27 -----------------------------------------------------------
 # > a) --------------------------------------------------------------------
