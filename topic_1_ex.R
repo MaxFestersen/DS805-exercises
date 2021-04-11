@@ -239,16 +239,50 @@ pairs(tbl, diag.panel = panel.boxplot) # Note panel.boxplot from SciViews create
 
 
 # Exercise 1.27 -----------------------------------------------------------
-# > a) --------------------------------------------------------------------
+data("T1-11") # data for table 1.11
+tbl.1.27 <- tbl
+names(tbl.1.27) <- c("Size", "Visitors")
 
+
+# > a) --------------------------------------------------------------------
+plot(tbl.1.27)
+cor(tbl.1.27)
+
+cat(paste(
+  "Not very correlated. No sir."
+))
 
 # > b) --------------------------------------------------------------------
+tbl.1.27 <- tbl.1.27[-7,]
+plot(tbl.1.27)
+cor(tbl.1.27)
 
+cat(paste(
+  "Not so corelated. But moar.",
+  "More than double correlation. Much improve. Such result. Wow.",
+  sep = "\n"
+))
 
 
 # > c) --------------------------------------------------------------------
+# Guessing results
+print("nothing will fucking happen, exept maybe the grid numbers.")
 
+# Reformatting
+tbl.1.27 <- tbl.1.27 %>% 
+  mutate(Size  = Size*0.0015625)
 
+# Testing
+plot(tbl.1.27)
+cor(tbl.1.27)
+
+# Explanation
+cat(paste(
+  "We were fucking right! We are smarts! We have inteligence.",
+  "Chaning the grid sizes, will not change the relation of the numbers.",
+  "Fucktarts.",
+  sep = "\n"
+))
 
 
 # Exercise 2.3 ------------------------------------------------------------
