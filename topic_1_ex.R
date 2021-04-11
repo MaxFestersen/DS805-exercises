@@ -205,7 +205,7 @@ names(tbl) <- c("Country", "100m", "200m", "400m", "800m", "1500m", "3000m", "Ma
 tbl.1.18 <- tbl %>% # Formatting all values as seconds
   mutate(`800m` = `800m`*60, `1500m` = `1500m`*60, `3000m` = `3000m`*60, `Marathon` = `Marathon`*60)
 
-tbl.1.18 <- tbl.1.18 %>% # Formatting all values as m/s
+tbl.1.18.1 <- tbl.1.18 %>% # Formatting all values as m/s
   mutate(`100m` = 100/`100m`, `200m` = 200/`200m`, `400m` = 400/`400m`, `800m` = 800/`800m`, `1500m` = 1500/`1500m`, `3000m` = 3000/`3000m`, `Marathon` = 42195/`Marathon`)
 
 # Mean for table
