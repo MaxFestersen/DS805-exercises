@@ -130,7 +130,7 @@ mu_x <- c(3,2,-2,0)
 E_AX <- A %*% mu_x
 # > b --------------------------------------------------------------------
 # >> Find Cov(AX, the variances and covariances of AX.
-
+Cov_Ax <- A %*% v.cov %*% t(A)
 # > c --------------------------------------------------------------------
 # >> Which pairs of linear combinations have zero coveriances?
 
