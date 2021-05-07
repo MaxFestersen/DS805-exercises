@@ -291,14 +291,16 @@ ex3.14.b.cov
 # is recorded in quadrillions (10^15) of BTUs.
 # The resulting mean and covariance matrix are:
 
-mu <- c(0.766, 0.508, 0.438, 0.161)
+mu <- c(0.766, 0.508, 0.438, 0.161) %>% t() %>% t()
 
 S <- matrix(c(0.856, 0.635, 0.173, 0.096, 0.635, 0.568, 0.127, 0.067, 0.173, 0.128, 0.171, 0.039, 0.096, 0.067, 0.039, 0.043), nrow = 4)
 
 
 # > (a) Using the summary statistics, determine the sample mean --------
 # and variance of a state's total energy consumption for these major sources.
+sum(mu)
 
+sum(S)
 
 # > (b) Determine the sample mean and variance of the excess of --------
 # petroleum consumption over natural gas consumption. Also find the sample 
