@@ -313,8 +313,9 @@ X.1.S <- S[,1] %>% t() %>% t() # X1 - pretrolium - sample mean
 X.2.S <- S[,2] %>% # X2 - natural gas - sample mean
   matrix(ncol = 1)
 
-
 excess <- X.1.S - X.2.S  # Excess of patrolium consumtion over natural gas sample covariance matrix
-sum(excess) # Excess of patrolium consumtion over natural gas sample covariance
-excessMean <- mean(excess)
-excessMean # Excess of patrolium consumtion over natural gas sample covariance mean
+
+t(excess) %*% c(1, -1, 0, 0) # variance
+
+sum(excess) # Excess of patrolium consumtion over natural gas sample covariance (sample covariance)
+
