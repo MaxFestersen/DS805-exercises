@@ -68,6 +68,25 @@ B <- matrix(c(1, 2, -2, -1), nrow = 2)
 
 
 # > 2.41 ------------------------------------------------------------------
+# You are given the random vector X' = [x_1, X_2, X_3, X4] with mean vector
+# µ'x =[3, 2, -2, 0] and variance_coveriance matrix
+v.cov = matrix(c(3, 0, 0, 0,
+           0, 3, 0, 0,
+           0, 0, 3, 0,
+	   0, 0, 0, 3),
+           nrow = 4,
+           ncol = 4
+           )
+# let
+A = matrix(c(1, -1, 0, 0,
+           1, 1, -2, 0,
+           1, 1, 1, -3),
+           nrow = 3,
+           ncol = 4
+           )
+#(a) Find E(AX), the mean of AX.
+#(b) Find Cov(AX, the variances and covariances of AX.
+#(c) Which pairs of linear combinations have zero coveriances?
 
 
 # > 3.7 -------------------------------------------------------------------
