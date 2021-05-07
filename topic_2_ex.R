@@ -244,8 +244,8 @@ colMeans(cbX)
 mean(c.X)
 mean(b.X)
 # >>> The variances
-var(c.X)
-var(b.X)
+var(t(c.X))
+var(b.X[1,])
 
 # >>> The covariances
 cov(cbX) # diagonal is variance
