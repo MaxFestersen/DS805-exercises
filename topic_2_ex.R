@@ -102,9 +102,14 @@ A = matrix(c(1, -1, 0, 0,
            nrow = 3,
            ncol = 4
            )
-#(a) Find E(AX), the mean of AX.
-#(b) Find Cov(AX, the variances and covariances of AX.
-#(c) Which pairs of linear combinations have zero coveriances?
+# >> a --------------------------------------------------------------------
+# >>>Find E(AX), the mean of AX.
+
+# >> b --------------------------------------------------------------------
+# >>> Find Cov(AX, the variances and covariances of AX.
+
+# >> c --------------------------------------------------------------------
+# >>> Which pairs of linear combinations have zero coveriances?
 
 
 # > 3.7 -------------------------------------------------------------------
