@@ -232,11 +232,16 @@ b.X
 # >>for c'X and b'X: Evaluate from first principle:
 # Note: calculate c'X and b'X, then calculate the other stuff.
 # >>> The sample means
+cbX <- cbind(t(c.X), t(b.X)) # TA solution
+colMeans(cbX)
 
+mean(c.X)
+mean(b.X)
 # >>> The variances
-
+var(t(c.X))
+var(t(b.X))
 # >>> The covariances
-
+cov(cbX)
 # > b --------------------------------------------------------------------
 # >>for c'X and b'X: calculate using 3-36:
 # Note: se side 141 (pdf side 162)
