@@ -305,5 +305,7 @@ sum(S)
 # > (b) Determine the sample mean and variance of the excess of --------
 # petroleum consumption over natural gas consumption. Also find the sample 
 # covariance of this variable with the total variable in part a.
-
+X.1 <- S[,1] %>% t() %>% t()
+X.2 <- S[,2] %>% 
+  matrix(ncol = 1)
 
