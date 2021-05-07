@@ -150,26 +150,26 @@ S.1 <- matrix(c(5,4, # Accutal name is S
 
 f1 <- ellipse(c(0, 0), S.1, radius = 1, add = FALSE, grid = FALSE, center.pch = FALSE, col = "black", lwd = 1)
 r <- eigen(S.1)
-segments(0, 0, r$vectors[1, 1] * sqrt(r$values[1]), r$vectors[2,1] * sqrt(r$values[1]))
-segments(0, 0, r$vectors[1, 2] * sqrt(r$values[2]), r$vectors[2,2] * sqrt(r$values[2]))
+segments(0, 0, r$vectors[1, 1] * sqrt(r$values[1]), r$vectors[2,1] * sqrt(r$values[1]),col = "black")
+segments(0, 0, r$vectors[1, 2] * sqrt(r$values[2]), r$vectors[2,2] * sqrt(r$values[2]),col = "black")
 
 S.2 <- matrix(c(5,-4, # Accutal name is S
                 -4,5),
               nrow = 2, ncol = 2)
 
-f1 <- ellipse(c(0, 0), S.2, radius = 1, add = FALSE, grid = FALSE, center.pch = FALSE, col = "black", lwd = 1)
+f1 <- ellipse(c(0, 0), S.2, radius = 1, add = FALSE, grid = FALSE, center.pch = FALSE, col = "blue", lwd = 1)
 r <- eigen(S.2)
-segments(0, 0, r$vectors[1, 1] * sqrt(r$values[1]), r$vectors[2,1] * sqrt(r$values[1]))
-segments(0, 0, r$vectors[1, 2] * sqrt(r$values[2]), r$vectors[2,2] * sqrt(r$values[2]))
+segments(0, 0, r$vectors[1, 1] * sqrt(r$values[1]), r$vectors[2,1] * sqrt(r$values[1]), col = "blue")
+segments(0, 0, r$vectors[1, 2] * sqrt(r$values[2]), r$vectors[2,2] * sqrt(r$values[2]), col = "blue")
 
 S.3 <- matrix(c(3,0, # Accutal name is S
                 0,3),
               nrow = 2, ncol = 2)
 
-f1 <- ellipse(c(0, 0), S.3, radius = 1, add = FALSE, grid = FALSE, center.pch = FALSE, col = "black", lwd = 1)
+f1 <- ellipse(c(0, 0), S.3, radius = 1, add = FALSE, grid = FALSE, center.pch = FALSE, col = "red", lwd = 1)
 r <- eigen(S.3)
-segments(0, 0, r$vectors[1, 1] * sqrt(r$values[1]), r$vectors[2,1] * sqrt(r$values[1]))
-segments(0, 0, r$vectors[1, 2] * sqrt(r$values[2]), r$vectors[2,2] * sqrt(r$values[2]))
+segments(0, 0, r$vectors[1, 1] * sqrt(r$values[1]), r$vectors[2,1] * sqrt(r$values[1]), col = "red")
+segments(0, 0, r$vectors[1, 2] * sqrt(r$values[2]), r$vectors[2,2] * sqrt(r$values[2]), col = "red")
 
 # 3.8 Given ---------------------------------------------------------------
 
