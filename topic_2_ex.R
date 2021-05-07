@@ -194,7 +194,7 @@ det(S.2)
 print("There is a difference and that's okay")
 
 # 3.11 ------------------------------------------------------------------
-# Use the sample covariance obtained in Example 3.7 to verify (3-29) and (3-30),
+# Use the sample covariance obtained in Example 3.7 to verify (3-29) and (3-30), - page 139-140 (pdf page 160-161)
 # which state that R = D^(-1/2)SD^(-1/2) and D^(1/2)RD^(1/2) = S
 S <- matrix(c(252.04, -68.43, -68.43, 123.67), nrow = 2, byrow = T)
 
