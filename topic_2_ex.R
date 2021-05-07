@@ -9,8 +9,11 @@ x.cov <- matrix(c(25, -2, 4,
            )
 # >> a --------------------------------------------------------------------
 # >>> Determine fancy p
+Rho <- cov2cor(x.cov)
 
 # >>> Determine V^½
+
+V <- sqrt(x.cov)
 
 # >> b ---------------------------------------------------------------------
 # Multiply matrices and check relation (V^½)*p*(V^½) = E
