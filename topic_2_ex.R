@@ -263,6 +263,7 @@ c %*% var(X) %*% t(c)
 b %*% var(X) %*% t(b)
 # >>> The covariances
 
+b %*% var(X) %*% t(c)
 # >> Compare results from a and b
 
 # 3.18 Energy consumption in 2001, by state, from the major sources -------
