@@ -173,15 +173,18 @@ segments(0, 0, r$vectors[1, 2] * sqrt(r$values[2]), r$vectors[2,2] * sqrt(r$valu
 
 # 3.8 Given ---------------------------------------------------------------
 
-S <- matrix(c(1,0,0,0,1,0,0,0,1), nrow = 3)
+S.1 <- matrix(c(1,0,0,0,1,0,0,0,1), nrow = 3)
 
-S_ <- matrix(c(1,-1/2,-1/2,-1/2,1,-1/2,-1/2,-1/2,1), nrow = 3)
+S.2 <- matrix(c(1,-1/2,-1/2,-1/2,1,-1/2,-1/2,-1/2,1), nrow = 3)
 
 
 # > (a) Calculate the total sample variance for each S. Compare the results ------
+var_S.1 <- sum(diag(S.1))
 
+var_S.2 <- sum(diag(S.2))
 
-
+# equal variance
+var_S.1 == var_S.2
 # > (b) Calculate the generalized sample variance for each S, and  --------
 # Comment on the discrepancies, if any, found between Parts a and b.
 
