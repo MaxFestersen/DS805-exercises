@@ -12,8 +12,10 @@ x.cov <- matrix(c(25, -2, 4,
            )
 
 
+
 # > a --------------------------------------------------------------------
 # >> Determine p
+Rho <- cov2cor(x.cov)
 p <- cor(x.cov)
 
 
@@ -21,6 +23,8 @@ p <- cor(x.cov)
 SD(p)
 
 # > b ---------------------------------------------------------------------
+V <- sqrt(x.cov)
+
 # Multiply matrices and check relation (V^½)*p*(V^½) = E
 
 
