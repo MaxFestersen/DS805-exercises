@@ -258,6 +258,11 @@ cov(cbX) # diagonal is variance
 # >>for c'X and b'X: calculate using 3-36:
 # Note: se side 141 (pdf side 162)
 # >>> The sample means
+# sample mean of c'X = c'x.sample.mean
+c %*% colMeans(X)
+
+# sample mean of b'X = b'x.sample.mean
+b %*% colMeans(X)
 
 # >>> The variances
 
