@@ -188,6 +188,10 @@ var_S.1 == var_S.2
 # > (b) Calculate the generalized sample variance for each S, and  --------
 # Comment on the discrepancies, if any, found between Parts a and b.
 
+det(S.1)
+det(S.2)
+
+# there is a difference and that's okay
 
 # 3.11 ------------------------------------------------------------------
 # Use the sample covariance obtained in Example 3.7 to verify (3-29) and (3-30),
