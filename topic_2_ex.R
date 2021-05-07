@@ -37,8 +37,8 @@ var_cov_var <- matrix(c(3, 0, 2, 2, 0, 1, 1, 0, 2, 1, 9, -2, 2, 0, -2, 4), nrow 
 
 # Let
 
-
 A <- c(1,2)
+
 B <- matrix(c(1, 2, -2, -1), nrow = 2)
 
 # and consider the linear combinations AX¹ and BX². Find:
