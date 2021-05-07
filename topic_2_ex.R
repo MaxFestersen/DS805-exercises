@@ -314,3 +314,5 @@ X.1
 X.2
 
 excess <- X.1 - X.2
+
+excessMean <- mean(excess)
