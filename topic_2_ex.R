@@ -215,10 +215,13 @@ X.2 <- X[,2]
 
 n <- 3
 p <- 2
-# X1
-# X2
+
 # c'X = [-1,2]*[X1,X2] = X1 + 2X2
 # b'X = [2,3]*[X1,X2]' = 2X1 + 3X2
+
+c.X <- matrix(c(-1,2), nrow = 1, ncol = 2) %*% t(X)
+
+b.X <- matrix(c(2, 3), nrow = 1, ncol = 2) %*% t(X)
 
 # > a --------------------------------------------------------------------
 # >>for c'X and b'X: Evaluate from first principle:
