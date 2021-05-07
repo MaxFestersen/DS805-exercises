@@ -222,11 +222,13 @@ p <- 2
 # > a --------------------------------------------------------------------
 # >>for c'X and b'X: Evaluate from first principle:
 # Note: calculate c'X and b'X, then calculate the other stuff.
-c.X <- matrix(c(-1,2), nrow = 1, ncol = 2) %*% t(X)
+c <- matrix(c(-1,2), nrow = 1, ncol = 2)
+c.X <- c %*% t(X)
 c.X
 -X.1 + 2 %*% X.2
 
-b.X <- matrix(c(2, 3), nrow = 1, ncol = 2) %*% t(X)
+b <- matrix(c(2, 3), nrow = 1, ncol = 2)
+b.X <- b %*% t(X)
 b.X
 2 %*% X.1 + 3 %*% X.2
 
@@ -243,6 +245,8 @@ colMeans(cbX)
 
 mean(c.X)
 mean(b.X)
+
+
 # >>> The variances
 var(t(c.X))
 var(b.X[1,])
