@@ -235,9 +235,6 @@ b.X
 cX <- c(-1,2) %*% t(X)
 bX <- c(2,3) %*% t(X)
 
-# > a --------------------------------------------------------------------
-# >>for c'X and b'X: Evaluate from first principle:
-# Note: calculate c'X and b'X, then calculate the other stuff.
 # >>> The sample means
 
 cbX <- cbind(t(c.X), t(b.X)) # TA solution
