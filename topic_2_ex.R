@@ -137,16 +137,33 @@ Cov_Ax <- A %*% v.cov %*% t(A)
 
 # 3.7 -------------------------------------------------------------------
 # Sketch the solid elipsoids (x-x.hat)'*(S^-1)*(x-x.hat) <= 1
-
+library(car)
 S.1 <- matrix(c(5,4, # Accutal name is S
                 4,5),
               nrow = 2, ncol = 2)
+
+f1 <- ellipse(c(0, 0), S.1, radius = 1, add = FALSE, grid = FALSE, center.pch = FALSE, col = "black", lwd = 1)
+r <- eigen(S.1)
+segments(0, 0, r$vectors[1, 1] * sqrt(r$values[1]), r$vectors[2,1] * sqrt(r$values[1]))
+segments(0, 0, r$vectors[1, 2] * sqrt(r$values[2]), r$vectors[2,2] * sqrt(r$values[2]))
+
 S.2 <- matrix(c(5,-4, # Accutal name is S
                 -4,5),
               nrow = 2, ncol = 2)
+
+f1 <- ellipse(c(0, 0), S.2, radius = 1, add = FALSE, grid = FALSE, center.pch = FALSE, col = "black", lwd = 1)
+r <- eigen(S.2)
+segments(0, 0, r$vectors[1, 1] * sqrt(r$values[1]), r$vectors[2,1] * sqrt(r$values[1]))
+segments(0, 0, r$vectors[1, 2] * sqrt(r$values[2]), r$vectors[2,2] * sqrt(r$values[2]))
+
 S.3 <- matrix(c(3,0, # Accutal name is S
                 0,3),
               nrow = 2, ncol = 2)
+
+f1 <- ellipse(c(0, 0), S.3, radius = 1, add = FALSE, grid = FALSE, center.pch = FALSE, col = "black", lwd = 1)
+r <- eigen(S.3)
+segments(0, 0, r$vectors[1, 1] * sqrt(r$values[1]), r$vectors[2,1] * sqrt(r$values[1]))
+segments(0, 0, r$vectors[1, 2] * sqrt(r$values[2]), r$vectors[2,2] * sqrt(r$values[2]))
 
 # 3.8 Given ---------------------------------------------------------------
 
@@ -156,6 +173,7 @@ S_ <- matrix(c(1,-1/2,-1/2,-1/2,1,-1/2,-1/2,-1/2,1), nrow = 3)
 
 
 # > (a) Calculate the total sample variance for each S. Compare the results ------
+
 
 
 # > (b) Calculate the generalized sample variance for each S, and  --------
