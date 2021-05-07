@@ -235,40 +235,54 @@ b.X
 cX <- c(-1,2) %*% t(X)
 bX <- c(2,3) %*% t(X)
 
-# > a --------------------------------------------------------------------
-# >>for c'X and b'X: Evaluate from first principle:
-# Note: calculate c'X and b'X, then calculate the other stuff.
 # >>> The sample means
 
 cbX <- cbind(t(c.X), t(b.X)) # TA solution
 colMeans(cbX)
 
-mean(c.X)
-mean(b.X)
+ex3.14.a.c.mean <- mean(c.X)
+ex3.14.a.b.mean <- mean(b.X)
 
 
 # >>> The variances
-var(t(c.X))
-var(b.X[1,])
+ex3.14.a.c.var <- var(t(c.X))
+ex3.14.a.b.var <- var(b.X[1,])
 
 # >>> The covariances
-cov(cbX) # diagonal is variance
+ex3.14.a.cov <- cov(cbX) # diagonal is variance
 
 # > b --------------------------------------------------------------------
 # >>for c'X and b'X: calculate using 3-36:
 # Note: se side 141 (pdf side 162)
 # >>> The sample means
 # sample mean of c'X = c'x.sample.mean
-c %*% colMeans(X)
+ex3.14.b.c.mean <- c %*% colMeans(X)
 
 # sample mean of b'X = b'x.sample.mean
-b %*% colMeans(X)
+ex3.14.b.b.mean <- b %*% colMeans(X)
 
 # >>> The variances
+ex3.14.b.c.var <- c %*% var(X) %*% t(c)
+ex3.14.b.b.var <- b %*% var(X) %*% t(b)
 
 # >>> The covariances
+ex3.14.b.cov <- b %*% var(X) %*% t(c)
 
 # >> Compare results from a and b
+ex3.14.a.b.mean
+ex3.14.b.b.mean
+ex3.14.a.c.mean
+ex3.14.b.c.mean
+
+# >>> The variances
+ex3.14.a.c.var
+ex3.14.b.c.var
+ex3.14.a.b.var
+ex3.14.b.b.var
+
+# >>> The covariances
+ex3.14.a.cov
+ex3.14.b.cov
 
 # 3.18 Energy consumption in 2001, by state, from the major sources -------
 
