@@ -258,9 +258,12 @@ cov(cbX) # diagonal is variance
 # >>for c'X and b'X: calculate using 3-36:
 # Note: se side 141 (pdf side 162)
 # >>> The sample means
+c %*% colMeans(X)
+b %*% colMeans(X)
 
 # >>> The variances
-
+c %*% var(X) %*% t(c)
+b %*% var(X) %*% t(b)
 # >>> The covariances
 
 # >> Compare results from a and b
