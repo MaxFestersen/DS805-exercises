@@ -132,7 +132,7 @@ A = matrix(c(1, -1, 0, 0,
 # >> Which pairs of linear combinations have zero coveriances?
 
 
-# > 3.7 -------------------------------------------------------------------
+# 3.7 -------------------------------------------------------------------
 # Sketch the solid elipsoids (x-x.hat)'*(S^-1)*(x-x.hat) <= 1
 
 S.1 <- matrix(c(5,4, # Accutal name is S
@@ -159,12 +159,12 @@ S_ <- matrix(c(1,-1/2,-1/2,-1/2,1,-1/2,-1/2,-1/2,1), nrow = 3)
 # Comment on the discrepancies, if any, found between Parts a and b.
 
 
-# > 3.11 ------------------------------------------------------------------
+# 3.11 ------------------------------------------------------------------
 # Use the sample covariance obtained in Example 3.7 to verify (3-29) and (3-30),
 # which state that R = D^(-1/2)SD^(-1/2) and D^(1/2)RD^(1/2) = S
 
 
-# > 3.14 ------------------------------------------------------------------
+# 3.14 ------------------------------------------------------------------
 X <- matrix(c(9,5,1, # From ex 3.1
             1,3,2),
             nrow = 3, ncol = 2)
