@@ -125,18 +125,24 @@ A = matrix(c(1, -1, 0, 0,
            )
 
 mu_x <- c(3,2,-2,0)
+
 # > a --------------------------------------------------------------------
 # >>Find E(AX), the mean of AX.
 E_AX <- A %*% mu_x
+
+
 # > b --------------------------------------------------------------------
-# >> Find Cov(AX, the variances and covariances of AX.
+# >> Find Cov(AX), the variances and covariances of AX.
 Cov_Ax <- A %*% v.cov %*% t(A)
+
 # > c --------------------------------------------------------------------
 # >> Which pairs of linear combinations have zero coveriances?
 
 
 # 3.7 -------------------------------------------------------------------
-# Sketch the solid elipsoids (x-x.hat)'*(S^-1)*(x-x.hat) <= 1
+# Sketch the solid elipsoids (x-x.est.mean)'*(S^-1)*(x-x.est.mean) <= 1
+# See 3-16, page 126 (pdf page 147)
+# 3-16: c^2 = (x-x.est.mean)'*(S^-1)*(x-x.est.mean)
 library(car)
 S.1 <- matrix(c(5,4, # Accutal name is S
                 4,5),
