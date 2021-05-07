@@ -219,6 +219,9 @@ p <- 2
 # c'X = [-1,2]*[X1,X2] = X1 + 2X2
 # b'X = [2,3]*[X1,X2]' = 2X1 + 3X2
 
+# > a --------------------------------------------------------------------
+# >>for c'X and b'X: Evaluate from first principle:
+# Note: calculate c'X and b'X, then calculate the other stuff.
 c.X <- matrix(c(-1,2), nrow = 1, ncol = 2) %*% t(X)
 c.X
 -X.1 + 2 %*% X.2
@@ -227,21 +230,26 @@ b.X <- matrix(c(2, 3), nrow = 1, ncol = 2) %*% t(X)
 b.X
 2 %*% X.1 + 3 %*% X.2
 
+cX <- c(-1,2) %*% t(X)
+bX <- c(2,3) %*% t(X)
 
 # > a --------------------------------------------------------------------
 # >>for c'X and b'X: Evaluate from first principle:
 # Note: calculate c'X and b'X, then calculate the other stuff.
 # >>> The sample means
+
 cbX <- cbind(t(c.X), t(b.X)) # TA solution
 colMeans(cbX)
 
 mean(c.X)
 mean(b.X)
 # >>> The variances
-var(t(c.X))
-var(t(b.X))
+var(c.X)
+var(b.X)
+
 # >>> The covariances
-cov(cbX)
+cov(cbX) # diagonal is variance
+
 # > b --------------------------------------------------------------------
 # >>for c'X and b'X: calculate using 3-36:
 # Note: se side 141 (pdf side 162)
