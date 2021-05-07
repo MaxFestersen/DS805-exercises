@@ -220,8 +220,13 @@ p <- 2
 # b'X = [2,3]*[X1,X2]' = 2X1 + 3X2
 
 c.X <- matrix(c(-1,2), nrow = 1, ncol = 2) %*% t(X)
+c.X
+-X.1 + 2 %*% X.2
 
 b.X <- matrix(c(2, 3), nrow = 1, ncol = 2) %*% t(X)
+b.X
+2 %*% X.1 + 3 %*% X.2
+
 
 # > a --------------------------------------------------------------------
 # >>for c'X and b'X: Evaluate from first principle:
