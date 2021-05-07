@@ -23,6 +23,7 @@ V <- diag(sqrt(diag(x.cov)))
 
 # Multiply matrices and check relation (V^½)*p*(V^½) = E
 
+V %*% Rho %*% V
 
 # > 2.30  ------------------------------------------------------------------
 
