@@ -12,7 +12,7 @@ x.cov <- matrix(c(25, -2, 4,
            )
 
 # > a --------------------------------------------------------------------
-# >> Determine p
+# >> Determine p (side 72-32 example 2.14 for mere info omkring P og V)
 Rho <- cov2cor(x.cov)
 
 # >> Determine V^½
