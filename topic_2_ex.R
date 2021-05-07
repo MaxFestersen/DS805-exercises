@@ -140,8 +140,9 @@ Cov_Ax <- A %*% v.cov %*% t(A)
 
 
 # 3.7 -------------------------------------------------------------------
-# Sketch the solid elipsoids (x-x.hat)'*(S^-1)*(x-x.hat) <= 1
-
+# Sketch the solid elipsoids (x-x.est.mean)'*(S^-1)*(x-x.est.mean) <= 1
+# See 3-16, page 126 (pdf page 147)
+# 3-16: c^2 = (x-x.est.mean)'*(S^-1)*(x-x.est.mean)
 S.1 <- matrix(c(5,4, # Accutal name is S
                 4,5),
               nrow = 2, ncol = 2)
