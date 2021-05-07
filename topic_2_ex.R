@@ -202,19 +202,9 @@ gen_S <- det(S)
 R <- solve(diag(sqrt(diag(S)))) %*% S %*% solve(diag(sqrt(diag(S))))
 D <- diag(sqrt(diag(S))) %*% R %*% diag(sqrt(diag(S)))
 
-
-
-
-#whitespace just for you Max v
-
-
-
-
-
-
-
-
-
+S == D # R might disagree, but it is the same
+S
+D
 
 # 3.14 ------------------------------------------------------------------
 X <- matrix(c(9,5,1, # From ex 3.1
