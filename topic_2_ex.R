@@ -1,7 +1,7 @@
 # Exercise set 2 ----------------------------------------------------------
 
 # > 2.25 -------------------------------------------------------------------
-x.cov = matrix(c(25, -2, 4,
+x.cov <- matrix(c(25, -2, 4,
            -2, 4, 1,
            4, 1, 9),
            nrow = 3,
@@ -71,7 +71,17 @@ B <- matrix(c(1, 2, -2, -1), nrow = 2)
 
 
 # > 3.7 -------------------------------------------------------------------
+# Sketch the solid elipsoids (x-x.hat)'*(S^-1)*(x-x.hat) <= 1
 
+S.1 <- matrix(c(5,4, # Accutal name is S
+                4,5),
+              nrow = 2, ncol = 2)
+S.2 <- matrix(c(5,-4, # Accutal name is S
+                -4,5),
+              nrow = 2, ncol = 2)
+S.3 <- matrix(c(3,0, # Accutal name is S
+                0,3),
+              nrow = 2, ncol = 2)
 
 # > 3.8 -------------------------------------------------------------------
 
@@ -80,7 +90,35 @@ B <- matrix(c(1, 2, -2, -1), nrow = 2)
 
 
 # > 3.14 ------------------------------------------------------------------
+X <- matrix(c(9,5,1, # From ex 3.1
+            1,3,2),
+            nrow = 3, ncol = 2)
+n <- 3
+p <- 2
+# X1
+# X2
+# c'X = [-1,2]*[X1,X2] = X1 + 2X2
+# b'X = [2,3]*[X1,X2]' = 2X1 + 3X2
 
+# >> a --------------------------------------------------------------------
+# >>>for c'X and b'X: Evaluate from first principle:
+# Note: calculate c'X and b'X, then calculate the other stuff.
+# >>>> The sample means
+
+# >>>> The variances
+
+# >>>> The covariances
+
+# >> b --------------------------------------------------------------------
+# >>>for c'X and b'X: calculate using 3-36:
+# Note: se side 141 (pdf side 162)
+# >>>> The sample means
+
+# >>>> The variances
+
+# >>>> The covariances
+
+# >>> Compare results from a and b
 
 # > 3.18 ------------------------------------------------------------------
 
