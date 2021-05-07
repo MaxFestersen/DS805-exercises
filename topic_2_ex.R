@@ -227,6 +227,8 @@ b.X <- matrix(c(2, 3), nrow = 1, ncol = 2) %*% t(X)
 b.X
 2 %*% X.1 + 3 %*% X.2
 
+cX <- c(-1,2) %*% t(X)
+bX <- c(2,3) %*% t(X)
 
 # > a --------------------------------------------------------------------
 # >>for c'X and b'X: Evaluate from first principle:
