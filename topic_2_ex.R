@@ -313,3 +313,5 @@ mu[1,] - mu[2,]
 
 excess <- X.1.S - X.2.S  # Excess of patrolium consumtion over natural gas sample covariance matrix
 sum(excess)  # Excess of patrolium consumtion over natural gas sample covariance
+
+excessMean <- mean(excess)
